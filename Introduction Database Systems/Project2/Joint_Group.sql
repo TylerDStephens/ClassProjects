@@ -1,0 +1,5 @@
+USE Project4;
+Select COUNT(RETAIL_ORDER.OrderNumber), Quantity
+FROM RETAIL_ORDER FULL OUTER JOIN ORDER_ITEM ON(RETAIL_ORDER.OrderNumber = ORDER_ITEM.OrderNumber)
+GROUP BY Quantity
+ORDER BY Quantity; 
